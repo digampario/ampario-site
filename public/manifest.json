@@ -1,0 +1,21 @@
+{
+    "name": "Ampario - Gestão de Manutenção HVAC",
+    "short_name": "Ampario",
+    "description": "Plataforma de gestão de manutenção de ar condicionado e PMOC Digital.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0f1c",
+    "theme_color": "#0a0f1c",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "any",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/Logo/ampario-logo.svg",
+            "type": "image/svg+xml",
+            "sizes": "any"
+        }
+    ]
+}
