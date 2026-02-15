@@ -1,4 +1,6 @@
 "use client";
+// Updated branding 2026-02-15
+
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
