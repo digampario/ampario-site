@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/Logo/ampario-logo.svg", // Using Logo as fallback OG Image for now
+        url: "/Logo/ampario-logo.png", // Using Logo as fallback OG Image for now
         width: 800,
         height: 600,
         alt: "Ampario Dashboard",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ampario — Manutenção HVAC Inteligente",
     description: "Gestão completa de PMOC e ativos de climatização.",
-    images: ["/Logo/ampario-logo.svg"], // Fallback
+    images: ["/Logo/ampario-logo.png"], // Fallback
   },
   icons: {
     icon: "/favicon.ico",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     title: "Ampario",
     statusBarStyle: "black-translucent",
-    startupImage: ["/Logo/ampario-logo.svg"],
+    startupImage: ["/Logo/ampario-logo.png"],
   },
 };
 

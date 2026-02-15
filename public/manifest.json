@@ -13,8 +13,8 @@
             "type": "image/x-icon"
         },
         {
-            "src": "/Logo/ampario-logo.svg",
-            "type": "image/svg+xml",
+            "src": "/Logo/ampario-logo.png",
+            "type": "image/png",
             "sizes": "any"
         }
     ]

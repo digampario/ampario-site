@@ -41,7 +41,7 @@ export function Header() {
                     <div className="relative w-12 h-10 transition-transform duration-300 group-hover:scale-105">
                         {/* Fallback to text if image not present, but user said images are in public/img */}
                         <Image
-                            src="/Logo/ampario-logo.svg"
+                            src="/Logo/ampario-logo.png"
                             alt="Ampario"
                             fill
                             className="object-contain object-left"
