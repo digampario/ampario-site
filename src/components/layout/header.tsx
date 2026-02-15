@@ -70,7 +70,13 @@ export function Header() {
                 </nav>
 
                 {/* CTA & MOBILE TOGGLE */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-6">
+                    <a
+                        href="https://app.ampario.app"
+                        className="hidden md:block text-sm font-medium text-zinc-300 hover:text-white transition-colors"
+                    >
+                        Entrar
+                    </a>
                     <Button variant="default" size="sm" className="hidden md:flex" asChild>
                         <Link href="#contato">Solicitar Demo</Link>
                     </Button>
@@ -104,6 +110,9 @@ export function Header() {
                                     {link.name}
                                 </Link>
                             ))}
+                            <Button variant="outline" className="w-full border-white/10" asChild>
+                                <a href="https://app.ampario.app">Acessar Sistema</a>
+                            </Button>
                             <Button className="w-full" asChild>
                                 <Link href="#contato">Solicitar Demo</Link>
                             </Button>

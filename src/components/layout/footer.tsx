@@ -23,7 +23,7 @@ export function Footer() {
                         <ul className="space-y-2 text-sm text-zinc-400">
                             <li><Link href="#como-funciona" className="hover:text-blue-400 transition-colors">Como funciona</Link></li>
                             <li><Link href="#planos" className="hover:text-blue-400 transition-colors">Planos</Link></li>
-                            <li><Link href="/login" className="hover:text-blue-400 transition-colors">Login Cliente</Link></li>
+                            <li><a href="https://app.ampario.app" className="hover:text-blue-400 transition-colors">Login Cliente</a></li>
                         </ul>
                     </div>
 
