@@ -137,8 +137,11 @@ export default function Home() {
         </section>
 
         {/* ================== PAIN / PROBLEM SECTION (NEW) ================== */}
-        <section className="py-24 bg-[#05080f] border-b border-white/5">
-          <div className="container mx-auto px-4 md:px-6">
+        <section className="py-24 bg-[#05080f] border-b border-white/5 relative">
+          {/* Technical Grid Background */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+
+          <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-heading leading-tight">
@@ -316,46 +319,46 @@ export default function Home() {
 
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">Planos que cabem no seu bolso</h2>
-              <p className="text-zinc-400">Comece grátis e evolua conforme sua operação cresce.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">Planos que acompanham sua maturidade</h2>
+              <p className="text-zinc-400">Comece validando o processo e escale para a gestão completa.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* STARTER */}
+              {/* STARTER -> TÉCNICO */}
               <GlassCard className="p-8 border-white/5 bg-white/[0.02] hover:border-white/10" hoverEffect>
-                <h3 className="text-xl font-bold text-white">Starter</h3>
+                <h3 className="text-xl font-bold text-white">Técnico / Piloto</h3>
                 <div className="mt-4 flex items-baseline gap-1">
                   <span className="text-4xl font-bold text-white">R$ 0</span>
                   <span className="text-sm text-zinc-500">/mês</span>
                 </div>
-                <p className="mt-2 text-sm text-zinc-400">Para quem está começando a organizar.</p>
+                <p className="mt-2 text-sm text-zinc-400">Para profissionais autônomos ou para validar o sistema na sua operação.</p>
                 <ul className="mt-6 space-y-3 text-sm text-zinc-300">
                   <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Até 50 ativos</li>
                   <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> 1 usuário</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> PMOC Básico</li>
+                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> PMOC Digital</li>
                 </ul>
                 <Button className="w-full mt-8" variant="outline" asChild>
-                  <a href={waLink("Olá! Tenho interesse no plano Starter Grátis.")} target="_blank">Começar Grátis</a>
+                  <a href={waLink("Olá! Quero iniciar um piloto técnico gratuito.")} target="_blank">Iniciar Piloto</a>
                 </Button>
               </GlassCard>
 
-              {/* PRO */}
+              {/* PRO -> BUSINESS */}
               <GlassCard className="p-8 border-blue-500/30 bg-blue-500/[0.02] relative" hoverEffect>
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full border border-blue-400">MAIS POPULAR</div>
-                <h3 className="text-xl font-bold text-white">Pro</h3>
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full border border-blue-400">GESTÃO COMPLETA</div>
+                <h3 className="text-xl font-bold text-white">Business</h3>
                 <div className="mt-4 flex items-baseline gap-1">
                   <span className="text-4xl font-bold text-white">R$ 197</span>
                   <span className="text-sm text-zinc-500">/mês</span>
                 </div>
-                <p className="mt-2 text-sm text-zinc-400">Para empresas em crescimento.</p>
+                <p className="mt-2 text-sm text-zinc-400">Para empresas que precisam de controle, múltiplos técnicos e relatórios avançados.</p>
                 <ul className="mt-6 space-y-3 text-sm text-zinc-300">
                   <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Até 500 ativos</li>
                   <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> 5 usuários</li>
                   <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Relatórios Personalizados</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Suporte WhatsApp</li>
+                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Suporte Prioritário</li>
                 </ul>
                 <Button className="w-full mt-8 shadow-[0_0_20px_rgba(37,99,235,0.3)]" asChild>
-                  <a href={waLink("Olá! Quero testar o plano Pro.")} target="_blank">Testar Grátis</a>
+                  <a href={waLink("Olá! Quero profissionalizar minha gestão com o plano Business.")} target="_blank">Profissionalizar Agora</a>
                 </Button>
               </GlassCard>
 
@@ -365,17 +368,58 @@ export default function Home() {
                 <div className="mt-4 flex items-baseline gap-1">
                   <span className="text-4xl font-bold text-white">Sob Consulta</span>
                 </div>
-                <p className="mt-2 text-sm text-zinc-400">Para grandes operações.</p>
+                <p className="mt-2 text-sm text-zinc-400">Para grandes contratos e operações críticas.</p>
                 <ul className="mt-6 space-y-3 text-sm text-zinc-300">
                   <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Ativos Ilimitados</li>
                   <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Usuários Ilimitados</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Integração API</li>
-                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Gerente de Conta</li>
+                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> Integração API / ERP</li>
+                  <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500" /> SLA de Suporte</li>
                 </ul>
                 <Button className="w-full mt-8" variant="outline" asChild>
-                  <a href={waLink("Olá! Tenho interesse no plano Enterprise.")} target="_blank">Falar com Consultor</a>
+                  <a href={waLink("Olá! Preciso de uma solução Enterprise personalizada.")} target="_blank">Falar com Engenharia</a>
                 </Button>
               </GlassCard>
+            </div>
+          </div>
+        </section>
+
+        {/* ================== FAQ SECTION (NEW) ================== */}
+        <section className="py-24 border-t border-white/5 bg-[#05080f]">
+          <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+            <div className="text-center mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-heading">Dúvidas Operacionais</h2>
+              <p className="text-zinc-400">Perguntas frequentes de quem lidera equipes técnicas.</p>
+            </div>
+
+            <div className="grid gap-4">
+              {[
+                {
+                  q: "O sistema funciona sem internet? (Offline)",
+                  a: "Sim. O App do Técnico foi desenhado para 'casas de máquinas' sem sinal. O técnico baixa a rota, executa tudo offline (checklist, fotos, assinatura) e o sistema sincroniza automaticamente quando retomar a conexão."
+                },
+                {
+                  q: "O PMOC gerado tem validade jurídica/ANVISA?",
+                  a: "Módulo 100% aderente à Lei 13.589/2018 e Resolução 09 da ANVISA. O sistema gera os relatórios, planos de manutenção e ART/TRT (vinculado ao seu responsável técnico) nos padrões exigidos pela fiscalização."
+                },
+                {
+                  q: "Consigo importar meus dados atuais?",
+                  a: "Sim. Temos templates de importação em Excel para cadastrar centenas de ativos e clientes de uma só vez. Nossa equipe de engenharia ajuda no setup inicial dos planos Business e Enterprise."
+                },
+                {
+                  q: "A assinatura digital tem validade?",
+                  a: "Sim. A assinatura coletada na tela do celular, junto com a geolocalização e o carimbo de data/hora (timestamp), compõe uma evidência técnica robusta da execução do serviço."
+                }
+              ].map((faq, i) => (
+                <div key={i} className="bg-white/[0.02] border border-white/5 rounded-lg p-6 hover:bg-white/[0.04] transition-colors">
+                  <h3 className="text-white font-semibold mb-2 flex items-start gap-3">
+                    <span className="text-blue-500 mt-1">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></svg>
+                    </span>
+                    {faq.q}
+                  </h3>
+                  <p className="text-zinc-400 text-sm ml-7 leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
