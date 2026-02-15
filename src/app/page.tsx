@@ -68,22 +68,22 @@ export default function Home() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                 </span>
-                <span className="text-xs font-semibold text-blue-300 uppercase tracking-wide">A evolução do PMOC Digital</span>
+                <span className="text-xs font-semibold text-blue-300 uppercase tracking-wide">Gestão de Manutenção Operacional</span>
               </motion.div>
 
               <motion.h1
                 variants={item}
                 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading tracking-tight text-white leading-[1.1]"
               >
-                O Fim do <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Caos</span> na <br className="hidden md:block" /> Gestão de HVAC.
+                A operação no <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">controle</span>.
               </motion.h1>
 
               <motion.p
                 variants={item}
                 className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed"
               >
-                Automatize seu PMOC, elimine o papel e tenha evidências auditáveis em segundos.
-                Mais controle na operação, menos retrabalho no escritório.
+                Manutenção não falha por falta de esforço. Falha por falta de controle.
+                Transforme sua operação com rastreabilidade, previsibilidade e evidência auditável.
               </motion.p>
 
               <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -136,38 +136,87 @@ export default function Home() {
           </motion.div>
         </section>
 
+        {/* ================== PAIN / PROBLEM SECTION (NEW) ================== */}
+        <section className="py-24 bg-[#05080f] border-b border-white/5">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-heading leading-tight">
+                  O custo da desorganização não aparece na planilha.
+                </h2>
+                <p className="text-lg text-zinc-400 mb-8 leading-relaxed">
+                  Aparece na parada inesperada, no retrabalho e na perda de histórico técnico.
+                  Sem controle real, a manutenção vira sempre reativa — mesmo quando parece organizada.
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    "Ocorrências sem histórico confiável",
+                    "Decisões reativas (apagar incêndio)",
+                    "Falta de visibilidade operacional",
+                    "Risco legal e fiscal (falta de evidência)"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-zinc-300 font-medium">
+                      <div className="w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center border border-red-500/20 shrink-0">
+                        <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                      </div>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-red-500/5 blur-[80px] rounded-full"></div>
+                <GlassCard className="p-8 border-red-500/10 relative">
+                  <h3 className="text-lg font-bold text-white mb-4">O ciclo da manutenção reativa</h3>
+                  <div className="space-y-4">
+                    <div className="p-4 bg-white/5 rounded-lg border border-white/5">
+                      <p className="text-sm text-zinc-400">🚨 Equipamento parou sem aviso</p>
+                    </div>
+                    <div className="p-4 bg-white/5 rounded-lg border border-white/5">
+                      <p className="text-sm text-zinc-400">📉 Compra de peças em emergência</p>
+                    </div>
+                    <div className="p-4 bg-white/5 rounded-lg border border-white/5">
+                      <p className="text-sm text-zinc-400">❓ "Qual foi a última preventiva?" (Sem registro)</p>
+                    </div>
+                  </div>
+                </GlassCard>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ================== FEATURES GRID ================== */}
         <section id="como-funciona" className="py-24 bg-[#0a0f1c]">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">Sua operação em piloto automático</h2>
-              <p className="text-zinc-400">Substitua planilhas e grupos de WhatsApp por uma plataforma profissional.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">Sustentação Operacional</h2>
+              <p className="text-zinc-400">Ferramentas desenhadas para quem está no campo e precisa de clareza, não de burocracia.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
                   icon: ClipboardCheck,
-                  title: "PMOC Digital",
-                  desc: "Geração automática de cronogramas e ordens de serviço preventivas conforme a lei.",
+                  title: "Conformidade Técnica",
+                  desc: "PMOC e rotinas preventivas que protegem a operação de riscos legais e técnicos.",
                   color: "text-blue-400"
                 },
                 {
                   icon: Smartphone,
-                  title: "App do Técnico",
-                  desc: "Checklists offline, fotos obrigatórias e assinatura digital na tela do celular.",
+                  title: "Execução & Evidência",
+                  desc: "Checklists offline e provas digitais direto do campo. O que é feito, é registrado.",
                   color: "text-green-400"
                 },
                 {
                   icon: FileText,
-                  title: "Relatórios PDF",
-                  desc: "Emita relatórios fotográficos profissionais com sua logo em segundos.",
+                  title: "Transparência Total",
+                  desc: "Relatórios fotográficos automáticos que eliminam dúvidas e aumentam a confiança.",
                   color: "text-purple-400"
                 },
                 {
                   icon: BarChart3,
-                  title: "Dashboards",
-                  desc: "Acompanhe indicadores de performance, pendências e lucratividade em tempo real.",
+                  title: "Decisão por Criticidade",
+                  desc: "Gestão baseada em risco (GUT) e indicadores reais. Chega de 'achismo'.",
                   color: "text-orange-400"
                 },
               ].map((feature, idx) => (
@@ -186,20 +235,24 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ================== VALUE PROP (Dark Section) ================== */}
+        {/* ================== MANIFESTO / VALUE PROP ================== */}
         <section className="py-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-blue-600/5 skew-y-3 transform origin-top-left scale-110 -z-10"></div>
           <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h2 className="text-3xl md:text-4xl font-bold font-heading text-white leading-tight">
-                Conformidade total sem dor de cabeça.
+                Manutenção não acontece no PowerPoint.
               </h2>
-              <ul className="space-y-4">
+              <p className="text-zinc-300 text-lg leading-relaxed">
+                Acontece no calor da fábrica, no ruído das máquinas, no tempo curto.
+                O Ampario existe para resolver a ruptura entre executar bem e documentar direito.
+              </p>
+              <ul className="space-y-4 mt-4">
                 {[
-                  "Agenda automática de preventivas",
-                  "Rastreabilidade total das atividades",
-                  "QRCode nos equipamentos para histórico",
-                  "Conforme com normas PMOC/ANVISA"
+                  "Confiabilidade: O que é planejado, acontece.",
+                  "Rastreabilidade: Histórico auditável em segundos.",
+                  "Praticidade: Feito para o campo, para a realidade.",
+                  "Segurança: Redução de risco operacional."
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-zinc-300">
                     <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
@@ -207,7 +260,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Button variant="secondary" size="lg" className="rounded-full" asChild>
+              <Button variant="secondary" size="lg" className="rounded-full mt-6" asChild>
                 <a href={waLink("Olá! Gostaria de agendar uma demonstração.")} target="_blank">Agendar Demonstração</a>
               </Button>
             </div>
@@ -222,17 +275,33 @@ export default function Home() {
                         <p className="text-xs text-zinc-500">Técnico de Campo</p>
                       </div>
                     </div>
-                    <span className="text-xs text-green-400 border border-green-500/20 bg-green-500/10 px-2 py-1 rounded-full">Em andamento</span>
+                    <span className="text-xs text-green-400 border border-green-500/20 bg-green-500/10 px-2 py-1 rounded-full">Concluído</span>
                   </div>
                   <div className="space-y-3">
-                    <div className="h-2 w-3/4 rounded bg-white/10"></div>
-                    <div className="h-2 w-1/2 rounded bg-white/10"></div>
+                    <div className="flex items-center gap-2 text-xs text-zinc-400">
+                      <CheckCircle2 className="w-3 h-3 text-green-500" />
+                      <span>Limpeza dos filtros de ar</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-zinc-400">
+                      <CheckCircle2 className="w-3 h-3 text-green-500" />
+                      <span>Verificação de correias</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-zinc-400">
+                      <CheckCircle2 className="w-3 h-3 text-green-500" />
+                      <span>Medição de corrente elétrica</span>
+                    </div>
                   </div>
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="h-20 rounded-lg bg-black/20 border border-white/5 flex items-center justify-center text-zinc-600 text-xs">Foto 1</div>
-                    <div className="h-20 rounded-lg bg-black/20 border border-white/5 flex items-center justify-center text-zinc-600 text-xs">Foto 2</div>
+                    <div className="h-20 rounded-lg bg-black/20 border border-white/5 flex items-center justify-center text-zinc-600 text-xs relative overflow-hidden group">
+                      <span className="z-10 relative">Foto Evidência 1</span>
+                      <div className="absolute inset-0 bg-zinc-800 opacity-50"></div>
+                    </div>
+                    <div className="h-20 rounded-lg bg-black/20 border border-white/5 flex items-center justify-center text-zinc-600 text-xs relative overflow-hidden group">
+                      <span className="z-10 relative">Foto Evidência 2</span>
+                      <div className="absolute inset-0 bg-zinc-800 opacity-50"></div>
+                    </div>
                   </div>
-                  <Button className="w-full mt-2">Concluir Serviço</Button>
+                  <Button className="w-full mt-2" disabled>Serviço Auditado</Button>
                 </div>
               </GlassCard>
             </div>

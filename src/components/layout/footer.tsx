@@ -12,8 +12,7 @@ export function Footer() {
                     <div className="col-span-1 md:col-span-2 space-y-4">
                         <h3 className="text-2xl font-bold font-heading text-white">Ampario</h3>
                         <p className="text-zinc-400 max-w-sm text-sm leading-relaxed">
-                            Mais controle na operação, menos retrabalho no escritório.
-                            A plataforma definitiva para gestão de manutenção HVAC com fluxo, evidências e indicadores auditáveis.
+                            Plataforma de gestão de manutenção operacional para equipes técnicas que precisam de execução, rastreabilidade e resultado.
                         </p>
                     </div>
 

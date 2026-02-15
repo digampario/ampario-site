@@ -17,13 +17,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ampario — Manutenção HVAC e PMOC Digital",
+    default: "Ampario — A operação no controle",
     template: "%s — Ampario",
   },
   description:
-    "Mais controle na operação, menos retrabalho no escritório: manutenção HVAC com fluxo, evidências e indicadores auditáveis. Adequação total PMOC e ANVISA.",
+    "Plataforma de Gestão de Manutenção Operacional (HVAC & Ambientes Críticos). Transforme manutenção em previsibilidade, segurança e evidência auditável.",
   metadataBase: new URL("https://ampario.app"),
-  keywords: ["PMOC", "HVAC", "Manutenção Ar Condicionado", "Gestão de Manutenção", "Software PMOC", "App Técnico"],
+  keywords: ["Gestão Operacional", "Rastreabilidade", "Confiabilidade", "Manutenção Industrial", "PMOC", "HVAC", "Manutenção Ar Condicionado"],
   authors: [{ name: "Ampario Tecnologia" }],
   creator: "Ampario Tecnologia",
   publisher: "Ampario Tecnologia",
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Ampario — O Fim do Caos na Manutenção HVAC",
-    description: "Automatize seu PMOC, elimine o papel e tenha evidências auditáveis em segundos.",
+    title: "Ampario — A operação no controle",
+    description: "Manutenção não falha por falta de esforço. Falha por falta de controle. Transforme sua operação com rastreabilidade, previsibilidade e evidência auditável.",
     url: "https://ampario.app",
     siteName: "Ampario",
     locale: "pt_BR",
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ampario — Manutenção HVAC Inteligente",
-    description: "Gestão completa de PMOC e ativos de climatização.",
+    title: "Ampario — A operação no controle",
+    description: "Gestão operacional para HVAC e ambientes críticos.",
     images: ["/Logo/ampario-logo.png"], // Fallback
   },
   icons: {
